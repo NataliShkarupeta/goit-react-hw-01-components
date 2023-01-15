@@ -1,7 +1,8 @@
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 import css from './profile.module.css';
 
-export default function Profile({ username, tag, location, avatar,stats }) {
+export default function Profile({ username, tag, location, avatar, stats }) {
   return (
     <div className={css.profile}>
       <div className={css.description}>
@@ -32,5 +33,5 @@ Profile.PropTypes = {
   avatar: PropTypes.string,
   tag: PropTypes.string,
   location: PropTypes.string,
-  stats:PropTypes.string,
+  stats: PropTypes.string,
 };
