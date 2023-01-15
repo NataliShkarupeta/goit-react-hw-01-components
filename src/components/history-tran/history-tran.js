@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import css from './history-tran.module.css';
 
 export default function TransactionHistory({transactions}) {
-return  <table className={css.transaction-history}>
+return  <table>
     <thead>
       <tr>
         <th>Type</th>
@@ -13,7 +13,7 @@ return  <table className={css.transaction-history}>
     <tbody>
       {transactions.map(transaction => (
         <Row
-          id={transaction.id}
+          key={transaction.id}
           type={transaction.type}
           amount={transaction.amount}
           currency={transaction.currency}
@@ -39,5 +39,5 @@ Row.PropTypes = {
   currency: PropTypes.string,
 };
 TransactionHistory.PropTypes = {
-  friends: PropTypes.arrayOf(PropTypes.shape),
+  transactions: PropTypes.arrayOf(PropTypes.shape),
 };

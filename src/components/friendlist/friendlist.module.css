@@ -1,0 +1,36 @@
+.list {
+  margin-left: auto;
+  padding: 5px;
+  margin-right: auto;
+  margin-top: 40px;
+  text-align: center;
+  width: 400px;
+  background-color: rgb(218, 215, 216);
+  list-style: none;
+}
+.item {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 5px;
+  border: 1px solid;
+  align-items: center;
+  background-color: aliceblue;
+}
+.avatar{
+ width: 70px;
+ height: 70px;
+ background-color: rgb(218, 215, 216) ;
+ border-radius: 3px;
+  margin-right: 25px;
+}
+.status{
+    margin-right: 25px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+.name{
+    font-size: 25px;
+    font-weight: 500;
+}
