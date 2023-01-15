@@ -28,7 +28,7 @@ export default function Statistics({ title, stats }) {
    );
  }
 
-Statistics.Prototype = {
+Statistics.prototype = {
   title: PropTypes.string,
   stats: PropTypes.arrayOf(PropTypes.shape),
 };

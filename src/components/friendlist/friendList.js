@@ -36,12 +36,12 @@ return (
 }
 
 
-FriendListItem.PropTypes = {
+FriendListItem.propTypes = {
   name: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
   isOnline: PropTypes.bool.isRequired,
-  id:PropTypes.number.isRequired,
+  id:PropTypes.number,
 };
-FriendList.PropTypes = {
+FriendList.propTypes = {
   friends:PropTypes.arrayOf(PropTypes.shape)
 };

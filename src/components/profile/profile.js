@@ -29,9 +29,9 @@ export default function Profile({ username, tag, location, avatar, stats }) {
     </div>
   );
 }
-Profile.PropTypes = {
+Profile.propTypes = {
   avatar: PropTypes.string,
   tag: PropTypes.string,
   location: PropTypes.string,
-  stats: PropTypes.string,
+  stats: PropTypes.object,
 };

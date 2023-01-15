@@ -32,12 +32,12 @@ function Row({ id, type, amount, currency }) {
     </tr>
   );
 }
-Row.PropTypes = {
+Row.propTypes = {
   id: PropTypes.number,
   type: PropTypes.string,
-  amount: PropTypes.number,
+  amount: PropTypes.string,
   currency: PropTypes.string,
 };
-TransactionHistory.PropTypes = {
+TransactionHistory.propTypes = {
   transactions: PropTypes.arrayOf(PropTypes.shape),
 };
