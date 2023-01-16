@@ -1,18 +1,16 @@
 import PropTypes from 'prop-types';
 import css from './history-tran.module.css';
 
-export function Row({ id, type, amount, currency }) {
+export function Row({ type, amount, currency }) {
   return (
-    <tr key={id}>
+    <tr >
       <td className={css.td}>{type}</td>
       <td className={css.td}>{amount}</td>
       <td className={css.td}>{currency}</td>
     </tr>
   );
 }
-Row.propTypes = {
-  id: PropTypes.number,
-  type: PropTypes.string,
-  amount: PropTypes.string,
-  currency: PropTypes.string,
+Row.propTypes = {type: PropTypes.string.isRequired,
+  amount: PropTypes.string.isRequired,
+  currency: PropTypes.string.isRequired,
 };

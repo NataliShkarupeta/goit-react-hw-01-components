@@ -5,16 +5,11 @@ import { Stat } from './Stat';
 export default function Statistics({ title, stats }) {
   return (
     <section className={css.statistics}>
-      <h2 className={css.title}>{title}</h2>
+      <h2 className={css.title}>{title && 'Upload stats'}</h2>
 
       <ul className={css.list}>
         {stats.map(stat => (
-          <Stat
-            label={stat.label}
-            percentage={stat.percentage}
-            key={stat.id}
-           
-          />
+          <Stat label={stat.label} percentage={stat.percentage} key={stat.id} />
         ))}
       </ul>
     </section>

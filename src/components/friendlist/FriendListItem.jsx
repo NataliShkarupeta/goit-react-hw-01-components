@@ -10,7 +10,7 @@ export function FriendListItem({ avatar, name, isOnline, id }) {
   };
 
   return (
-    <li className={css.item} key={id}>
+    <li className={css.item} >
       <span
         className={css.status}
         style={isOnline === true ? colorActive : colorNotActive}
