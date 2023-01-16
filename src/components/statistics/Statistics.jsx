@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import css from './statistics.module.css'
+import { Stat } from './Stat';
 
 export default function Statistics({ title, stats }) {
   return (
@@ -19,16 +20,15 @@ export default function Statistics({ title, stats }) {
     </section>
   );
 }
- function Stat({ label, percentage, id }) {
-   return (
-     <li className={css.item} key={id} >
-       <span className={css.label}>{label}</span>
-       <span className={css.percentage}>{percentage}%</span>
-     </li>
-   );
- }
+
 
 Statistics.prototype = {
   title: PropTypes.string,
-  stats: PropTypes.arrayOf(PropTypes.shape),
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
+    }).isRequired
+  ),
 };
