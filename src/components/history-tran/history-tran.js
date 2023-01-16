@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types'
-// import css from './history-tran.module.css';
+import css from './history-tran.module.css';
 
 export default function TransactionHistory({transactions}) {
 return  <table>
     <thead>
       <tr>
-        <th>Type</th>
-        <th>Amount</th>
-        <th>Currency</th>
+        <th className={css.th}>Type</th>
+        <th className={css.th}>Amount</th>
+        <th className={css.th}>Currency</th>
       </tr>
     </thead>
     <tbody>
@@ -26,9 +26,9 @@ return  <table>
 function Row({ id, type, amount, currency }) {
   return (
     <tr key={id}>
-      <td>{type}</td>
-      <td>{amount}</td>
-      <td>{currency}</td>
+      <td className={css.td}>{type}</td>
+      <td className={css.td}>{amount}</td>
+      <td className={css.td}>{currency}</td>
     </tr>
   );
 }

@@ -27,8 +27,8 @@ thead th:nth-child(3) {
 }
 
 
-th,
-td {
+.th,
+.td {
 
   padding: 10px;
   border: 0.5px solid rgb(132, 120, 132);
